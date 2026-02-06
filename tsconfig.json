@@ -15,13 +15,27 @@
     "noEmit": true,
     "jsx": "react-jsx",
 
+    /* Path Resolution */
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./*"]
+    },
+
     /* Linting */
     "strict": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules", "vite.config.ts", "backend"],
+  "include": [
+    "./**/*.ts", 
+    "./**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules", 
+    "dist", 
+    "backend", 
+    "vite.config.ts"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
